@@ -1,31 +1,30 @@
-[class*="example"] {
-  min-height: 300px; }
-
-.example-1 {
-  background-image: url(https://static.pexels.com/photos/414075/pexels-photo-414075.jpeg);
-  margin: 0;
+* {
+    box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url('../image/2.jpeg');
+  width: 100%;
+  height: 100vh;
   text-align: center;
   background-size: cover;
-    background-size-background-position: center;
-    background-size-overflow: hidden; }
-
-.example-2 {
-  background-image: url(https://static.pexels.com/photos/437350/pexels-photo-437350.jpeg);
-  margin: 0;
-  text-align: center;
-  background-size: cover;
-    background-size-background-position: center;
-    background-size-overflow: hidden; }
-
-.example-3 {
-  background-image: url(https://static.pexels.com/photos/1440/city-road-street-buildings.jpg);
-  margin: 0;
-  text-align: center;
-  background-size: cover;
-    background-size-background-position: center;
-    background-size-overflow: hidden; }
-
-.example-4 {
-  background-color: #F22613; }
-
-/*# sourceMappingURL=style.css.map */
+  background-position: center;
+  overflow: hidden;
+}
+.board h1 {
+  font-family: 'Raleway', sans-serif;
+  text-decoration: underline;
+  font-size: 40px;
+}
+.column-container {
+  background-color: black;
+    border: 5px solid brown;
+}
+.column-title {
+  color: white;
+}
+ul {
+  min-height: 200px;
+  background-image: url('../image/1.jpg');
+  color: black;
+}

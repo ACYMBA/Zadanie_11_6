@@ -1,7 +1,5 @@
 $(function() {
-    // here we will put the code of our application
-})
-function randomString() {
+ function randomString() {
     var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ';
     var str = '';
     for (i = 0; i < 10; i++) {
@@ -16,7 +14,7 @@ function Column(name) {
     this.$element = createColumn();
   
     function createColumn() {
-    	var $column = $('<div>').addClass('column');
+      var $column = $('<div>').addClass('column  col-md-4');
         var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
         var $columnCardList = $('<ul>').addClass('column-card-list');
         var $columnDelete = $('<button>').addClass('btn-delete').text('x');
@@ -49,13 +47,13 @@ Column.prototype = {
 };
 
 function Card(description) {
-	var self = this;
+  var self = this;
 
     this.id = randomString();
     this.description = description;
     this.$element = createCard(); //
 
-	function createCard() {
+  function createCard() {
       var $card = $('<li>').addClass('card');
       var $cardDescription = $('<p>').addClass('card-description').text(self.description);
       var $cardDelete = $('<button>').addClass('btn-delete').text('x');
@@ -69,8 +67,8 @@ function Card(description) {
 }
 
 Card.prototype = {
-	removeCard: function() {
-		this.$element.remove();
+  removeCard: function() {
+    this.$element.remove();
 }
 }
 
@@ -91,9 +89,9 @@ function initSortable() {
   }
   $('.create-column')
   .click(function(){
-	var name = prompt('Enter a column name');
-	var column = new Column(name);
-    	board.addColumn(column);
+  var name = prompt('Enter a column name');
+  var column = new Column(name);
+      board.addColumn(column);
   });
   // TWORZENIE KOLUMN
 var todoColumn = new Column('To do');
@@ -111,4 +109,5 @@ var card2 = new Card('Create kanban boards');
 
 // DODAWANIE KART DO KOLUMN
 todoColumn.addCard(card1);
-doingColumn.addCard(card2);
+doingColumn.addCard(card2);   
+})
